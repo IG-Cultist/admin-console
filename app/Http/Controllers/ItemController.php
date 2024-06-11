@@ -34,6 +34,6 @@ class ItemController extends Controller{
             'effect' => '70',
             'explain' => 'ダメージを与える際、必ず値が70に固定される'
         ]];
-        return view('accounts/index',['accounts' => $data]);
+        return view('accounts/item',['accounts' => $data]);
     }
 }

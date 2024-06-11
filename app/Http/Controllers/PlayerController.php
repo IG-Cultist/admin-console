@@ -6,34 +6,34 @@ class PlayerController extends Controller{
     #プレイヤー一覧を表示
     public function index(Request $request){
         if(!$request->session()->exists('login')){
-            redirect('accounts/login');
+            return redirect('accounts/login');
         }
         $data=[[
             'id' => '1',
-            'name' => 'ほしにく',
-            'type' => '消耗品',
-            'effect' => '20',
-            'explain' => '使うとなくなる。丁寧に干された肉。20回復'
+            'name' => 'I.G.C',
+            'level' => '34',
+            'exp' => '2400',
+            'life' => '143'
 
         ],[
             'id' => '2',
-            'name' => '回復ポーション',
-            'type' => '消耗品',
-            'effect' => '100',
-            'explain' => '使うとなくなる。赤く輝く回復薬。100回復'
+            'name' => 'ダイアモンド不愉快',
+            'level' => '47',
+            'exp' => '3602',
+            'life' => '175'
         ],[
             'id' => '3',
-            'name' => 'チタンバックル',
-            'type' => '装備品',
-            'effect' => '15',
-            'explain' => 'ダメージを受ける毎、15の固定ダメージ軽減'
+            'name' => 'CacoDemon',
+            'level' => '61',
+            'exp' => '6840',
+            'life' => '241'
         ],[
             'id' => '4',
-            'name' => 'モルテンナックル',
-            'type' => '装備品',
-            'effect' => '70',
-            'explain' => 'ダメージを与える際、必ず値が70に固定される'
+            'name' => 'Beginner',
+            'level' => '5',
+            'exp' => '70',
+            'life' => '21'
         ]];
-        return view('accounts/index',['accounts' => $data]);
+        return view('accounts/player',['accounts' => $data]);
     }
 }

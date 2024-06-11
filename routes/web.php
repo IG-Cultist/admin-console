@@ -23,10 +23,10 @@ Route::get('accounts/home',[HomeController::class,'index']);
 Route::get('accounts/index/{account_id?}',[AccountController::class,'index']);
 
 #プレイヤー一覧画面
-Route::get('accounts/playerList/{account_id?}',[PlayerController::class,'index']);
+Route::get('accounts/playerList',[PlayerController::class,'index']);
 
 #アイテム一覧画面
-Route::get('accounts/itemList/{account_id?}',[ItemController::class,'index']);
+Route::get('accounts/itemList',[ItemController::class,'index']);
 
 #所持アイテム一覧画面
-Route::get('accounts/playerItemList/{account_id?}',[PlayerItemController::class,'index']);
+Route::get('accounts/playerItemList',[PlayerItemController::class,'index']);
